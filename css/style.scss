@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    transition: all .2s linear;
+}
+
+//variables colores
+$azul:#3b2a98;
+$blanco:#ffffff;
+
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar{ // grosor"
+        width: 1.3rem;
+    }
+
+    &::-webkit-scrollbar-track{ // color de fondo del scroll
+        background: #ffffff;
+    }
+    
+    &::-webkit-scrollbar-thumb{ // color barra scroll
+        background: $azul;
+    }
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+// nav superior
+.nav-superior{
+    background: $azul;
+    padding: 1.7rem 0;
+
+    .nav-container-superior{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            font-size: 1.8rem;
+            color: $blanco;
+        }
+
+        .iconos{
+            margin: 0 0 0 4rem;
+
+            a{
+                color: $blanco;
+                font-size: 1.8rem;
+                margin: 0 .2rem;
+            }
+        }
+    }
+}
+
+// navbar
+
+// .menu{
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     z-index: 4000;
+//     background-color: #ffffff;
+//     color: $azul;
+//     border-bottom: 1px solid $azul;
+// }
+
+.menu__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 10000;
+    padding: 2rem 0;
+
+    // .logo{
+    //     font-size: 2rem;
+    //     margin-left: 30px;
+    // }
+
+    img{
+        height: 7rem;
+        width: 12rem;
+        margin-left: 30px;
+    }
+}
+
+.menu__links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    font-size: 1.8rem;
+    z-index: 10000;
+}
+
+.menu__item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0); /* con este se esconde */
+    --transform: rotate(0deg);
+}
+
+.menu__item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* con este mostramos el submenu*/
+    --transform: rotate(90deg); 
+}
+
+
+.menu__link{
+     color: $azul;
+     text-decoration: none;
+     padding: 0 30px 0 20px;
+     display: flex;
+     height: 100%;
+     align-items: center;
+
+     &:hover{
+        transform: scale(1.05);
+     }
+}
+
+// .menu__link:hover{
+//     background: #4b5e83;
+// }
+
+.menu__arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 1px;
+    font-size: 2.5rem;
+}
+
+.menu__nesting{
+    list-style: none;
+    transition:clip-path .3s;
+    clip-path: var(--clip); /* escondemos el submenu, ul dentro de li */
+    position: absolute;
+    right: 0;
+    bottom: -2rem;
+    width: max-content;
+    transform: translateY(100%);
+    background: #ffffff;
+}
+
+.menu__link--inside{
+    padding: 13px 70px 13px 20px;
+    font-size: 1.7rem;
+}
+
+.menu__link--inside:hover{
+    background-color: $azul;
+    color: #ffffff;
+}
+
+
+
+.menu__container .menu__hamburguer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img{
+    display: block;
+    font-size: 4rem;
+}
+
+
+
+//slider
+.home{
+    padding: 0 2%;
+    // margin-top: 2rem;
+    // background: #F8F2FC;
+
+    .slide{
+        mask-image: linear-gradient(white 90%,transparent);
+        mask-size: cover;
+        min-height: 78vh;
+        background-size: cover !important; //se centra "casi" imagen
+        background-position: 0 20% !important; // busca el centro de la imagen "abdomen"
+        padding: 0 ;  // se mueve texto
+        display: flex;       // centra el texto en pantalla "abdomen" 
+        align-items: center; // centra el texto en pantalla "abdomen"
+        // filter: brightness(50%);
+        
+
+        .content{
+            width: 50%;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-90%, 50%);
+            // text-align: center;
+
+            h3{ 
+                // text-align: center;
+                font-size: 3.5rem;
+                color: #000;
+                display: block;
+                // letter-spacing: 0.5rem;
+                font-weight: 600;
+            }
+
+            p{
+                color: #000;
+                font-size: 2rem;
+                margin-top: 3rem;
+                // font-weight: bold;
+            }
+        }
+    }
+
+   
+}  
+
+.btn{
+    padding: 2rem 4rem 2rem 4rem;
+    background: $azul;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ffffff;
+    font-weight: 500;
+    box-shadow: 2px 2px 2px 1px $azul;
+    border-radius: .5rem;
+
+    &:hover{
+      background: $azul;
+      border: 1px solid #ffffff;
+    }
+  }
+
+.swiper-pagination-bullet{
+    height: 1.4rem;
+    width: 1.4rem;
+    background: rgb(108, 108, 108);
+    border-radius: 50%;
+    border: 3px solid $azul;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    &.swiper-pagination-bullet-active{
+        background: #ffffff00;
+      }
+}
+
+
+
+
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+        scroll-padding: 7rem;
+    }
+
+    // .titulos .container-nosotros .textos-nosotros p{
+    //     width: 90%;
+    // }
+
+    .swiper-slide img {
+        width: 25rem;
+        height: 25rem;
+      } 
+}
+
+
+@media (max-width:800px) {
+    header .menu .menu__container{
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+
+    .menu__container .menu__hamburguer{
+        display: flex;
+
+        &:hover{
+            transform: rotate(180deg);
+        }
+    }
+
+    .menu__item{
+        --clip:0;
+        overflow: hidden;
+    }
+
+    .menu__item--active{
+        --transform: rotate(0); /* rotamos la flecha en responsivo*/
+        --background: #5e7094;
+    }
+
+    // .menu__item--show{
+    //     background-color: $rosado;
+    // }
+
+    .menu__links{
+        z-index: 10000;
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 100px;
+        bottom: 0;
+        right: 0;
+        background-color: #ffffff;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%); /*mostrar ocultar menu hamburgueesa*/
+    }
+
+    .menu__links--show{
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu__link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu__arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting{
+        display: grid;
+        position: unset; /* lo regresa a su valor original, ya no esta posicionado absolutamente a su padre */
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu__link--inside{
+        width: 90%;
+        margin-left: 3rem;
+        border-left: 1px solid $azul;
+        // background: rgb(246, 246, 213);
+        // border-bottom: 1px solid $dorado;
+        font-size: 1.8rem;
+    }
+
+    .contactos .datos-contactos{
+        padding: 2rem 6%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .contacto{
+            margin-top: 2rem;
+        }
+    }
+
+    //slider
+    .home .swiper .swiper-wrapper .slide .content{
+        transform: translate(-50%, 50%);
+        text-align: center ;
+    }
+
+}
+
+@media (max-width:700px){
+    .home .swiper .swiper-wrapper .slide{
+        mask-image: linear-gradient(white 85%,transparent);
+    }
+
+    .home .swiper .swiper-wrapper .slide .content{
+        transform: translate(-50%, 10%);
+        text-align: center ;
+        width: 75%;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .menu img{
+        height: 6rem;
+        width: 10rem;
+    }
+}
