@@ -316,6 +316,9 @@ body {
   html {
     font-size: 50%;
   }
+  .home .slide {
+    background-position: 20% 20% !important;
+  }
   .menu img {
     height: 6rem;
     width: 10rem;
