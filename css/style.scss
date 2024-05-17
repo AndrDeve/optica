@@ -21,17 +21,17 @@ html{
     scroll-padding-top: 5rem;
     overflow-x: hidden;
 
-    &::-webkit-scrollbar{ // grosor"
-        width: 1.3rem;
-    }
+    // &::-webkit-scrollbar{ // grosor"
+    //     width: 1.3rem;
+    // }
 
-    &::-webkit-scrollbar-track{ // color de fondo del scroll
-        background: #ffffff;
-    }
+    // &::-webkit-scrollbar-track{ // color de fondo del scroll
+    //     background: #ffffff;
+    // }
     
-    &::-webkit-scrollbar-thumb{ // color barra scroll
-        background: $azul;
-    }
+    // &::-webkit-scrollbar-thumb{ // color barra scroll
+    //     background: $azul;
+    // }
 }
 
 
@@ -303,6 +303,46 @@ body{
     }
 }
 
+// categoria
+.categorias{
+    padding:4rem 2% 0 2%;
+    text-align: center;
+
+    h2{
+        margin-bottom: 5rem;
+        text-align: center;
+        color: $azul;
+        font-size: 3.5rem;
+    }
+
+    .container-categorias{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .items-categoria{
+            text-align: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding-bottom: 5rem;
+            
+            a{
+                background: $azul;
+                color: $blanco;
+                padding: 1rem 4rem;
+                font-size: 2rem;
+            }
+
+            img{
+                margin-top: 3rem;
+                height: 40rem;
+                width: 30rem;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
 
 
 
@@ -452,12 +492,29 @@ body{
             font-size: 1.4rem;
         }
     }
+
+    .categorias .container-categorias .items-categoria{
+        // a{  
+        //     padding: .8rem 3.8rem;
+        //     font-size: 1.8rem;
+        // }
+
+        img{
+            height: 35rem;
+            width: 25rem;
+        }
+    }
+
 }
 
 
 @media (max-width:450px){
     html{
         font-size: 50%;
+    }
+
+    .home{
+        padding: 0;
     }
 
     .home .slide{
@@ -467,5 +524,14 @@ body{
     .menu img{
         height: 6rem;
         width: 10rem;
+    }
+}
+
+@media (max-width:420px){
+    .categorias .container-categorias .items-categoria{
+        img{
+            height: 45rem;
+            width: 35rem;
+        }
     }
 }

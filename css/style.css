@@ -15,15 +15,6 @@ html {
   scroll-padding-top: 5rem;
   overflow-x: hidden;
 }
-html::-webkit-scrollbar {
-  width: 1.3rem;
-}
-html::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-html::-webkit-scrollbar-thumb {
-  background: #3b2a98;
-}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -242,6 +233,41 @@ body {
   color: #a7a7a7;
 }
 
+.categorias {
+  padding: 4rem 2% 0 2%;
+  text-align: center;
+}
+.categorias h2 {
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #3b2a98;
+  font-size: 3.5rem;
+}
+.categorias .container-categorias {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.categorias .container-categorias .items-categoria {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+.categorias .container-categorias .items-categoria a {
+  background: #3b2a98;
+  color: #ffffff;
+  padding: 1rem 4rem;
+  font-size: 2rem;
+}
+.categorias .container-categorias .items-categoria img {
+  margin-top: 3rem;
+  height: 40rem;
+  width: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -349,10 +375,17 @@ body {
   .items-importantes .contenedor-items span {
     font-size: 1.4rem;
   }
+  .categorias .container-categorias .items-categoria img {
+    height: 35rem;
+    width: 25rem;
+  }
 }
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .home {
+    padding: 0;
   }
   .home .slide {
     background-position: 20% 20% !important;
@@ -360,5 +393,11 @@ body {
   .menu img {
     height: 6rem;
     width: 10rem;
+  }
+}
+@media (max-width: 420px) {
+  .categorias .container-categorias .items-categoria img {
+    height: 45rem;
+    width: 35rem;
   }
 }/*# sourceMappingURL=style.css.map */
