@@ -345,6 +345,47 @@ body{
     }
 }
 
+// lentes para la familia
+.lentes-familia{
+    padding: 0 2%;
+
+    h2{
+        text-align: center;
+        color: $azul;
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .container-lentes-familia{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .items-lentes-familia{
+            margin-bottom: 3rem;
+            margin: 0 auto;
+            padding-bottom: 4rem;
+
+            img{
+                height: 30rem;
+                width: 35rem;
+                object-fit: cover;
+            }
+
+            p{
+                font-size: 2.5rem;
+                color:#494949;
+                margin: .8rem 0;
+            }
+
+            a{
+                font-size: 2rem;
+                color:$azul;
+            }
+        }
+    }
+}
+
 
 
 

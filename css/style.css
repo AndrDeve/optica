@@ -269,6 +269,41 @@ body {
      object-fit: cover;
 }
 
+.lentes-familia {
+  padding: 0 2%;
+}
+.lentes-familia h2 {
+  text-align: center;
+  color: #3b2a98;
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+}
+.lentes-familia .container-lentes-familia {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.lentes-familia .container-lentes-familia .items-lentes-familia {
+  margin-bottom: 3rem;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+.lentes-familia .container-lentes-familia .items-lentes-familia img {
+  height: 30rem;
+  width: 35rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.lentes-familia .container-lentes-familia .items-lentes-familia p {
+  font-size: 2.5rem;
+  color: #494949;
+  margin: 0.8rem 0;
+}
+.lentes-familia .container-lentes-familia .items-lentes-familia a {
+  font-size: 2rem;
+  color: #3b2a98;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
