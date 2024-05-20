@@ -15,33 +15,63 @@ var swiper = new Swiper(".home-slider", {
     },
   });
 
-//lo más vendido
-var swiper = new Swiper(".mySwiper", {
-  // slidesPerView: 3,
-  spaceBetween: 55,
-  autoplay:{
-    delay:3000,
+// //lo más vendido
+// var swiper = new Swiper(".mySwiper", {
+//   // slidesPerView: 3,
+//   spaceBetween: 55,
+//   autoplay:{
+//     delay:3000,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   breakpoints: {
+//     // when window width is >= 320px
+//     320: {
+//       slidesPerView: 2,
+//       spaceBetween: 60
+//     },
+//     // when window width is >= 480px
+//     480: {
+//       slidesPerView: 2,
+//       spaceBetween: 30
+//     },
+//     // when window width is >= 640px
+//     500: {
+//       slidesPerView: 3,
+//       spaceBetween: 40
+//     }
+//   }
+// });
+
+
+//reseñas
+var swiper = new Swiper(".blogs-slider", {
+  spaceBetween: 50,
+  grabCursor:true,
+  loop:true,
+  autoplay: {
+    delay: 3000,
     disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 60
+  breakpoints:{
+    0:{
+      slidesPerView:1,
     },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 30
+    420:{
+      slidesPerView:2,
     },
-    // when window width is >= 640px
-    500: {
-      slidesPerView: 3,
-      spaceBetween: 40
-    }
-  }
+    768:{
+      slidesPerView:3,
+    },
+    991:{
+      slidesPerView:4,
+    },
+  },
 });
