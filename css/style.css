@@ -304,6 +304,59 @@ body {
   color: #3b2a98;
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: 30px auto;
+}
+.accordion .titulos-acordeon {
+  text-align: center;
+  color: #3b2a98;
+}
+.accordion .titulos-acordeon h3 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+.accordion .titulos-acordeon h2 {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+
+.accordion-item {
+  border-top: 1px solid #ccc;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: rgb(241, 241, 241);
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+}
+
+.accordion-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  font-size: 1.5rem;
+  color: #494949;
+}
+
+.active {
+  max-height: 1000px; /* Adjust as needed */
+  opacity: 1;
+  padding: 5px 10px;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -312,6 +365,9 @@ body {
   .swiper-slide img {
     width: 25rem;
     height: 25rem;
+  }
+  .accordion {
+    width: 500px;
   }
 }
 @media (max-width: 800px) {
@@ -415,6 +471,10 @@ body {
     height: 35rem;
     width: 25rem;
   }
+  .accordion {
+    width: 350px;
+    margin: 15px auto;
+  }
 }
 @media (max-width: 450px) {
   html {
@@ -435,5 +495,8 @@ body {
   .categorias .container-categorias .items-categoria img {
     height: 45rem;
     width: 35rem;
+  }
+  .accordion {
+    width: 330px;
   }
 }/*# sourceMappingURL=style.css.map */
