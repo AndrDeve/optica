@@ -409,6 +409,80 @@ body {
   padding: 0.5rem 0;
 }
 
+.footer {
+  margin: 6rem 0 0 0;
+  padding: 0 3%;
+  width: 100%;
+  height: 100%;
+  background: url(../img/footer1.png);
+  background-attachment: fixed; /*imagen fija*/
+  background-position: 50%;
+  background-size: cover; /*toda la imagen*/
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.footer .container-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0 3rem 0;
+  flex-wrap: wrap;
+}
+.footer .container-footer .sobre-nosotros-footer {
+  width: 25%;
+}
+.footer .container-footer h3 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+.footer .container-footer p {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.footer .container-footer hr {
+  border: 1px solid rgb(255, 255, 255);
+  width: 100%;
+  margin: 0.5rem 0 2rem;
+}
+.footer .links-footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer .links-footer a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer .categoria-footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer .categoria-footer a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer .siguenos--footer {
+  flex-direction: column;
+}
+.footer .siguenos--footer a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0 0.2rem;
+}
+.footer .copy {
+  padding: 1.5rem 0;
+  text-align: center;
+  background: rgba(11, 11, 149, 0.46);
+  border-top: 2px solid rgb(255, 255, 255);
+}
+.footer .copy span {
+  font-size: 1.7rem;
+}
+.footer .copy span .span {
+  color: rgb(255, 255, 255);
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -506,6 +580,23 @@ body {
     transform: translate(-50%, 15%);
     text-align: center;
     width: 75%;
+  }
+  .footer .container-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .container-footer hr {
+    width: 50%;
+  }
+  .footer .container-footer .sobre-nosotros-footer {
+    width: 90%;
+    margin-bottom: 3.5rem;
+  }
+  .footer .container-footer .links-footer {
+    margin-bottom: 3.5rem;
+  }
+  .footer .container-footer .categoria-footer {
+    margin-bottom: 3.5rem;
   }
 }
 @media (max-width: 600px) {
