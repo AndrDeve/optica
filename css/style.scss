@@ -630,6 +630,108 @@ body{
   }
   
     
+//estilos de sobre nosotros
+figure{
+    padding: 0 2%;
+}
+figure img{
+    height: 65vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sobre-nosotros{
+    // background: rgb(241, 241, 241);
+    margin: 0 2%;
+
+    .container-sobre-nosotros{
+        text-align: center;
+        justify-content: center;
+        padding: 5rem 0;
+
+        span{
+            font-size: 1.8rem;
+        }
+
+        h2{
+            padding: 2rem 0;
+            font-size: 3rem;
+        }
+
+        p{
+            padding: 0 6%;
+            font-size: 1.5rem;
+            color: #595959;
+        }
+    }
+}
+
+
+//nuestros servicios
+.nuestros-servicios{
+    background: $blanco;
+    padding: 0 3%;
+
+    .hola{
+        padding-top: 7rem;
+    }
+
+    h2{
+        text-align: center;
+        padding: 5rem 0 6rem 0;
+        font-size: 3.5rem;
+        color: $azul;
+    }
+
+
+    .contenedor-nuestros-servicios{
+        display: flex;
+        align-items: center;
+        
+        
+
+        img{
+            height: 55rem;
+            width: 50rem;
+        }
+
+        .contenedor-textos{
+            margin:0% 5%;
+            align-items: center;
+
+            .img-servicios{
+                display: flex;
+                margin-bottom: 2rem;
+
+                h3{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                p{
+                    font-size: 1.6rem;
+                    color: #595959;
+                    letter-spacing: 1px;
+                    line-height: 25px;
+                }
+            }
+
+            .texto{
+
+                img{
+                   height: 7rem;
+                   width: 7rem;
+                   margin-right: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
 
@@ -652,6 +754,21 @@ body{
     .accordion{
         width: 500px;
     }  
+}
+
+@media (max-width:960px){
+    .nuestros-servicios .contenedor-nuestros-servicios{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img{
+            margin-bottom: 5rem;
+        }
+        
+        .contenedor-textos{
+            margin: 0 3%;
+        }
+    } 
 }
 
 
@@ -820,6 +937,37 @@ body{
     .accordion{
         width: 350px;
         margin: 15px auto;
+    } 
+
+
+    .nuestros-servicios .contenedor-nuestros-servicios{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img{
+            height: 35rem;
+            width: 30rem;
+        }
+        
+        .contenedor-textos{
+            margin: 0 3%;
+
+            .img-servicios{
+                h3{
+                    font-size: 1.7rem;
+                }
+
+                p{
+                    font-size: 1.4rem;
+                    line-height: 20px;
+                }
+            }
+
+            .texto img{
+                height: 5rem;
+                width: 5rem;
+            }
+        }
     } 
 
 }

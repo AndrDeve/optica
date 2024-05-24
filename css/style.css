@@ -483,6 +483,83 @@ body {
   color: rgb(255, 255, 255);
 }
 
+figure {
+  padding: 0 2%;
+}
+
+figure img {
+  height: 65vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sobre-nosotros {
+  margin: 0 2%;
+}
+.sobre-nosotros .container-sobre-nosotros {
+  text-align: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+.sobre-nosotros .container-sobre-nosotros span {
+  font-size: 1.8rem;
+}
+.sobre-nosotros .container-sobre-nosotros h2 {
+  padding: 2rem 0;
+  font-size: 3rem;
+}
+.sobre-nosotros .container-sobre-nosotros p {
+  padding: 0 6%;
+  font-size: 1.5rem;
+  color: #595959;
+}
+
+.nuestros-servicios {
+  background: #ffffff;
+  padding: 0 3%;
+}
+.nuestros-servicios .hola {
+  padding-top: 7rem;
+}
+.nuestros-servicios h2 {
+  text-align: center;
+  padding: 5rem 0 6rem 0;
+  font-size: 3.5rem;
+  color: #3b2a98;
+}
+.nuestros-servicios .contenedor-nuestros-servicios {
+  display: flex;
+  align-items: center;
+}
+.nuestros-servicios .contenedor-nuestros-servicios img {
+  height: 55rem;
+  width: 50rem;
+}
+.nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos {
+  margin: 0% 5%;
+  align-items: center;
+}
+.nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos .img-servicios {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos .img-servicios h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos .img-servicios p {
+  font-size: 1.6rem;
+  color: #595959;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+.nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos .texto img {
+  height: 7rem;
+  width: 7rem;
+  margin-right: 2rem;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -494,6 +571,18 @@ body {
   }
   .accordion {
     width: 500px;
+  }
+}
+@media (max-width: 960px) {
+  .nuestros-servicios .contenedor-nuestros-servicios {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nuestros-servicios .contenedor-nuestros-servicios img {
+    margin-bottom: 5rem;
+  }
+  .nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos {
+    margin: 0 3%;
   }
 }
 @media (max-width: 800px) {
@@ -617,6 +706,28 @@ body {
   .accordion {
     width: 350px;
     margin: 15px auto;
+  }
+  .nuestros-servicios .contenedor-nuestros-servicios {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nuestros-servicios .contenedor-nuestros-servicios img {
+    height: 35rem;
+    width: 30rem;
+  }
+  .nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos {
+    margin: 0 3%;
+  }
+  .nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos .img-servicios h3 {
+    font-size: 1.7rem;
+  }
+  .nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos .img-servicios p {
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+  .nuestros-servicios .contenedor-nuestros-servicios .contenedor-textos .texto img {
+    height: 5rem;
+    width: 5rem;
   }
 }
 @media (max-width: 450px) {
