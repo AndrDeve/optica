@@ -729,6 +729,20 @@ figure img{
 }
 
 
+//mapa
+.mapa{
+    text-align: center;
+
+    h3{
+        color: $azul;
+        font-size: 3rem;
+        margin: 3.5rem 0;
+    }
+
+    
+}
+
+
 
 
 
@@ -769,6 +783,13 @@ figure img{
             margin: 0 3%;
         }
     } 
+
+    .mapa{
+        .mapita{
+            height: 350;
+            width: 550px;
+        }
+    }
 }
 
 
@@ -970,6 +991,13 @@ figure img{
         }
     } 
 
+    .mapa{
+        .mapita{
+            height: 200px;
+            width: 350px;
+        }
+    }
+
 }
 
 
@@ -1003,4 +1031,11 @@ figure img{
     .accordion{
         width: 330px;
     } 
+
+    .mapa{
+        .mapita{
+            height: 200px;
+            width: 300px;
+        }
+    }
 }
